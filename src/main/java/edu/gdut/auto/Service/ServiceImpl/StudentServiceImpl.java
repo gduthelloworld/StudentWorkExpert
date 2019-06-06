@@ -26,4 +26,13 @@ public class StudentServiceImpl implements StudentService {
             return studentMapper.selectByStuName(search.trim());
         }
     }
+
+    @Override
+    public String getStudentPic(String stuId){
+        Long stuId_long=Long.valueOf(stuId);
+        //TODO 妈耶，实体类设置错误了，所以要改实体类
+        return "hehehe";
+       // return studentMapper.selectByPrimaryKey(stuId_long).getStuPic();
+    }
+
 }

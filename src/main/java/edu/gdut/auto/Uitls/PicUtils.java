@@ -18,6 +18,12 @@ public class PicUtils {
         }
         return false;
     }
+
+    /**
+     * 获取文件的后缀名
+     * @param fileName
+     * @return
+     */
     public static String getSuffixName(String fileName){
         return fileName.substring(fileName.lastIndexOf("."));
     }

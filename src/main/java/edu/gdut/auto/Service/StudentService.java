@@ -8,4 +8,6 @@ public interface StudentService {
 
     List<Student> findStudent(String search);
 
+    String getStudentPic(String stuId);
+
 }

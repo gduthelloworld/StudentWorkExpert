@@ -7,6 +7,7 @@ import edu.gdut.auto.Result.ResultEnum;
 import edu.gdut.auto.Result.ResultUtil;
 import edu.gdut.auto.Service.CollegeAndClassService;
 import edu.gdut.auto.Service.FileService;
+import edu.gdut.auto.Service.StudentService;
 import edu.gdut.auto.Uitls.MyFileUtils;
 import edu.gdut.auto.Uitls.PicUtils;
 import edu.gdut.auto.Uitls.RequestUtils;
@@ -34,6 +35,8 @@ public class ApiController {
 
     @Autowired
     CollegeAndClassService collegeAndClassService;
+    @Autowired
+    StudentService studentService;
     @Autowired
     FileService fileService;
     @Autowired
@@ -106,6 +109,18 @@ public class ApiController {
     @ResponseBody
     public Result updateUserPic(@RequestParam(value = "userPic") MultipartFile file) throws IOException {
         return ResultUtil.success(fileService.addUserPic(file));
+    }
+
+    /**
+     * 获取某个学生的照片
+     * @param request
+     * @return
+     */
+    @GetMapping("/userPic")
+    @ResponseBody
+    public Result getUserPic(HttpServletRequest request){
+        String stuId=RequestUtils.GetRequestParameter(request,"stuId");
+        return ResultUtil.success(studentService.getStudentPic(stuId));
     }
 
     /**
