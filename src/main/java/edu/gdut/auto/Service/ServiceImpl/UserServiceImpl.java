@@ -5,7 +5,9 @@ import edu.gdut.auto.Exception.MyException;
 import edu.gdut.auto.Result.ResultEnum;
 import edu.gdut.auto.Service.UserService;
 
+import edu.gdut.auto.mappers.LoginInEntityMapper;
 import edu.gdut.auto.mappers.UserMapper;
+import edu.gdut.auto.pojo.LoginInEntity;
 import edu.gdut.auto.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    LoginInEntityMapper loginInEntityMapper;
 
 
     /**
@@ -37,8 +41,7 @@ public class UserServiceImpl implements UserService {
                             //登陆成功后清除错误次数
                             userMapper.updateUserError(userInfo.getUserId(), (byte) 0);
                         }
-                        //TODO 插入登陆记录
-                        //loginInListMapper.insertLoginin(id_long,ip);
+                        loginInEntityMapper.insertSelective(new LoginInEntity(null,id_long,null,ip));
                         return userInfo;
                     }
                     userMapper.updateUserError(userInfo.getUserId(), (byte) (userInfo.getUserError() + 1));
