@@ -26,7 +26,8 @@ public class MyExceptionHandler {
     @ExceptionHandler(value = MyException.class)
     @ResponseBody
     public Result handlerMyException(MyException e) {
-        log.error("【自定义异常】["+e.getCode()+"]"+e.getMessage());
+        /*因为太麻烦了*/
+        //log.error("【自定义异常】["+e.getCode()+"]"+e.getMessage());
         return ResultUtil.error(e.getCode(), e.getMessage());
     }
 
