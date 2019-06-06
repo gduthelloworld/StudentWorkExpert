@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.OrganizationMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.Organization" >
+    <id column="org_id" property="orgId" jdbcType="INTEGER" />
+    <result column="org_name" property="orgName" jdbcType="VARCHAR" />
+    <result column="org_type" property="orgType" jdbcType="TINYINT" />
+    <result column="org_college" property="orgCollege" jdbcType="VARCHAR" />
+    <result column="org_leader_id" property="orgLeaderId" jdbcType="BIGINT" />
+    <result column="org_num" property="orgNum" jdbcType="INTEGER" />
+    <result column="org_add_time" property="orgAddTime" jdbcType="TIMESTAMP" />
+    <result column="org_state" property="orgState" jdbcType="TINYINT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="edu.gdut.auto.pojo.Organization" extends="BaseResultMap" >
+    <result column="org_detail" property="orgDetail" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    org_id, org_name, org_type, org_college, org_leader_id, org_num, org_add_time, org_state
+  </sql>
+  <sql id="Blob_Column_List" >
+    org_detail
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from organization_list
+    where org_id = #{orgId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from organization_list
+    where org_id = #{orgId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.Organization" >
+    <selectKey resultType="java.lang.Integer" keyProperty="orgId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into organization_list (org_name, org_type, org_college, 
+      org_leader_id, org_num, org_add_time, 
+      org_state, org_detail)
+    values (#{orgName,jdbcType=VARCHAR}, #{orgType,jdbcType=TINYINT}, #{orgCollege,jdbcType=VARCHAR}, 
+      #{orgLeaderId,jdbcType=BIGINT}, #{orgNum,jdbcType=INTEGER}, #{orgAddTime,jdbcType=TIMESTAMP}, 
+      #{orgState,jdbcType=TINYINT}, #{orgDetail,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.Organization" >
+    <selectKey resultType="java.lang.Integer" keyProperty="orgId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into organization_list
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orgName != null" >
+        org_name,
+      </if>
+      <if test="orgType != null" >
+        org_type,
+      </if>
+      <if test="orgCollege != null" >
+        org_college,
+      </if>
+      <if test="orgLeaderId != null" >
+        org_leader_id,
+      </if>
+      <if test="orgNum != null" >
+        org_num,
+      </if>
+      <if test="orgAddTime != null" >
+        org_add_time,
+      </if>
+      <if test="orgState != null" >
+        org_state,
+      </if>
+      <if test="orgDetail != null" >
+        org_detail,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orgName != null" >
+        #{orgName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        #{orgType,jdbcType=TINYINT},
+      </if>
+      <if test="orgCollege != null" >
+        #{orgCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="orgLeaderId != null" >
+        #{orgLeaderId,jdbcType=BIGINT},
+      </if>
+      <if test="orgNum != null" >
+        #{orgNum,jdbcType=INTEGER},
+      </if>
+      <if test="orgAddTime != null" >
+        #{orgAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orgState != null" >
+        #{orgState,jdbcType=TINYINT},
+      </if>
+      <if test="orgDetail != null" >
+        #{orgDetail,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.Organization" >
+    update organization_list
+    <set >
+      <if test="orgName != null" >
+        org_name = #{orgName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        org_type = #{orgType,jdbcType=TINYINT},
+      </if>
+      <if test="orgCollege != null" >
+        org_college = #{orgCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="orgLeaderId != null" >
+        org_leader_id = #{orgLeaderId,jdbcType=BIGINT},
+      </if>
+      <if test="orgNum != null" >
+        org_num = #{orgNum,jdbcType=INTEGER},
+      </if>
+      <if test="orgAddTime != null" >
+        org_add_time = #{orgAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orgState != null" >
+        org_state = #{orgState,jdbcType=TINYINT},
+      </if>
+      <if test="orgDetail != null" >
+        org_detail = #{orgDetail,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where org_id = #{orgId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="edu.gdut.auto.pojo.Organization" >
+    update organization_list
+    set org_name = #{orgName,jdbcType=VARCHAR},
+      org_type = #{orgType,jdbcType=TINYINT},
+      org_college = #{orgCollege,jdbcType=VARCHAR},
+      org_leader_id = #{orgLeaderId,jdbcType=BIGINT},
+      org_num = #{orgNum,jdbcType=INTEGER},
+      org_add_time = #{orgAddTime,jdbcType=TIMESTAMP},
+      org_state = #{orgState,jdbcType=TINYINT},
+      org_detail = #{orgDetail,jdbcType=LONGVARCHAR}
+    where org_id = #{orgId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.Organization" >
+    update organization_list
+    set org_name = #{orgName,jdbcType=VARCHAR},
+      org_type = #{orgType,jdbcType=TINYINT},
+      org_college = #{orgCollege,jdbcType=VARCHAR},
+      org_leader_id = #{orgLeaderId,jdbcType=BIGINT},
+      org_num = #{orgNum,jdbcType=INTEGER},
+      org_add_time = #{orgAddTime,jdbcType=TIMESTAMP},
+      org_state = #{orgState,jdbcType=TINYINT}
+    where org_id = #{orgId,jdbcType=INTEGER}
+  </update>
+</mapper>

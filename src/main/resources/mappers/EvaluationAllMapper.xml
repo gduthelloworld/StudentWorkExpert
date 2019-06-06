@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.EvaluationAllMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.EvaluationAll" >
+    <id column="evaluation_id" property="evaluationId" jdbcType="INTEGER" />
+    <result column="evaluation_stu_id" property="evaluationStuId" jdbcType="INTEGER" />
+    <result column="evaluation_college_id" property="evaluationCollegeId" jdbcType="INTEGER" />
+    <result column="evaluation_class_code" property="evaluationClassCode" jdbcType="INTEGER" />
+    <result column="evaluation_year" property="evaluationYear" jdbcType="TINYINT" />
+    <result column="evaluation_c1" property="evaluationC1" jdbcType="DOUBLE" />
+    <result column="evaluation_c2" property="evaluationC2" jdbcType="DOUBLE" />
+    <result column="evaluation_s1" property="evaluationS1" jdbcType="DOUBLE" />
+    <result column="evaluation_s2" property="evaluationS2" jdbcType="DOUBLE" />
+    <result column="evaluation_s3" property="evaluationS3" jdbcType="DOUBLE" />
+    <result column="evaluation_w" property="evaluationW" jdbcType="DOUBLE" />
+    <result column="evaluation_x" property="evaluationX" jdbcType="DOUBLE" />
+    <result column="evaluation_pinde" property="evaluationPinde" jdbcType="DOUBLE" />
+    <result column="evaluation_not_pass" property="evaluationNotPass" jdbcType="TINYINT" />
+    <result column="evaluation_p" property="evaluationP" jdbcType="DOUBLE" />
+    <result column="evaluation_class_no" property="evaluationClassNo" jdbcType="INTEGER" />
+    <result column="evaluation_profession_no" property="evaluationProfessionNo" jdbcType="INTEGER" />
+    <result column="evaluation_add" property="evaluationAdd" jdbcType="TIMESTAMP" />
+    <result column="evaluation_update" property="evaluationUpdate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    evaluation_id, evaluation_stu_id, evaluation_college_id, evaluation_class_code, evaluation_year, 
+    evaluation_c1, evaluation_c2, evaluation_s1, evaluation_s2, evaluation_s3, evaluation_w, 
+    evaluation_x, evaluation_pinde, evaluation_not_pass, evaluation_p, evaluation_class_no, 
+    evaluation_profession_no, evaluation_add, evaluation_update
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from evaluation_all
+    where evaluation_id = #{evaluationId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from evaluation_all
+    where evaluation_id = #{evaluationId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.EvaluationAll" >
+    <selectKey resultType="java.lang.Integer" keyProperty="evaluationId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into evaluation_all (evaluation_stu_id, evaluation_college_id, 
+      evaluation_class_code, evaluation_year, evaluation_c1, 
+      evaluation_c2, evaluation_s1, evaluation_s2, 
+      evaluation_s3, evaluation_w, evaluation_x, 
+      evaluation_pinde, evaluation_not_pass, evaluation_p, 
+      evaluation_class_no, evaluation_profession_no, 
+      evaluation_add, evaluation_update)
+    values (#{evaluationStuId,jdbcType=INTEGER}, #{evaluationCollegeId,jdbcType=INTEGER}, 
+      #{evaluationClassCode,jdbcType=INTEGER}, #{evaluationYear,jdbcType=TINYINT}, #{evaluationC1,jdbcType=DOUBLE}, 
+      #{evaluationC2,jdbcType=DOUBLE}, #{evaluationS1,jdbcType=DOUBLE}, #{evaluationS2,jdbcType=DOUBLE}, 
+      #{evaluationS3,jdbcType=DOUBLE}, #{evaluationW,jdbcType=DOUBLE}, #{evaluationX,jdbcType=DOUBLE}, 
+      #{evaluationPinde,jdbcType=DOUBLE}, #{evaluationNotPass,jdbcType=TINYINT}, #{evaluationP,jdbcType=DOUBLE}, 
+      #{evaluationClassNo,jdbcType=INTEGER}, #{evaluationProfessionNo,jdbcType=INTEGER}, 
+      #{evaluationAdd,jdbcType=TIMESTAMP}, #{evaluationUpdate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.EvaluationAll" >
+    <selectKey resultType="java.lang.Integer" keyProperty="evaluationId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into evaluation_all
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="evaluationStuId != null" >
+        evaluation_stu_id,
+      </if>
+      <if test="evaluationCollegeId != null" >
+        evaluation_college_id,
+      </if>
+      <if test="evaluationClassCode != null" >
+        evaluation_class_code,
+      </if>
+      <if test="evaluationYear != null" >
+        evaluation_year,
+      </if>
+      <if test="evaluationC1 != null" >
+        evaluation_c1,
+      </if>
+      <if test="evaluationC2 != null" >
+        evaluation_c2,
+      </if>
+      <if test="evaluationS1 != null" >
+        evaluation_s1,
+      </if>
+      <if test="evaluationS2 != null" >
+        evaluation_s2,
+      </if>
+      <if test="evaluationS3 != null" >
+        evaluation_s3,
+      </if>
+      <if test="evaluationW != null" >
+        evaluation_w,
+      </if>
+      <if test="evaluationX != null" >
+        evaluation_x,
+      </if>
+      <if test="evaluationPinde != null" >
+        evaluation_pinde,
+      </if>
+      <if test="evaluationNotPass != null" >
+        evaluation_not_pass,
+      </if>
+      <if test="evaluationP != null" >
+        evaluation_p,
+      </if>
+      <if test="evaluationClassNo != null" >
+        evaluation_class_no,
+      </if>
+      <if test="evaluationProfessionNo != null" >
+        evaluation_profession_no,
+      </if>
+      <if test="evaluationAdd != null" >
+        evaluation_add,
+      </if>
+      <if test="evaluationUpdate != null" >
+        evaluation_update,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="evaluationStuId != null" >
+        #{evaluationStuId,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationCollegeId != null" >
+        #{evaluationCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationClassCode != null" >
+        #{evaluationClassCode,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationYear != null" >
+        #{evaluationYear,jdbcType=TINYINT},
+      </if>
+      <if test="evaluationC1 != null" >
+        #{evaluationC1,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationC2 != null" >
+        #{evaluationC2,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationS1 != null" >
+        #{evaluationS1,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationS2 != null" >
+        #{evaluationS2,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationS3 != null" >
+        #{evaluationS3,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationW != null" >
+        #{evaluationW,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationX != null" >
+        #{evaluationX,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationPinde != null" >
+        #{evaluationPinde,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationNotPass != null" >
+        #{evaluationNotPass,jdbcType=TINYINT},
+      </if>
+      <if test="evaluationP != null" >
+        #{evaluationP,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationClassNo != null" >
+        #{evaluationClassNo,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationProfessionNo != null" >
+        #{evaluationProfessionNo,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationAdd != null" >
+        #{evaluationAdd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="evaluationUpdate != null" >
+        #{evaluationUpdate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.EvaluationAll" >
+    update evaluation_all
+    <set >
+      <if test="evaluationStuId != null" >
+        evaluation_stu_id = #{evaluationStuId,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationCollegeId != null" >
+        evaluation_college_id = #{evaluationCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationClassCode != null" >
+        evaluation_class_code = #{evaluationClassCode,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationYear != null" >
+        evaluation_year = #{evaluationYear,jdbcType=TINYINT},
+      </if>
+      <if test="evaluationC1 != null" >
+        evaluation_c1 = #{evaluationC1,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationC2 != null" >
+        evaluation_c2 = #{evaluationC2,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationS1 != null" >
+        evaluation_s1 = #{evaluationS1,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationS2 != null" >
+        evaluation_s2 = #{evaluationS2,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationS3 != null" >
+        evaluation_s3 = #{evaluationS3,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationW != null" >
+        evaluation_w = #{evaluationW,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationX != null" >
+        evaluation_x = #{evaluationX,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationPinde != null" >
+        evaluation_pinde = #{evaluationPinde,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationNotPass != null" >
+        evaluation_not_pass = #{evaluationNotPass,jdbcType=TINYINT},
+      </if>
+      <if test="evaluationP != null" >
+        evaluation_p = #{evaluationP,jdbcType=DOUBLE},
+      </if>
+      <if test="evaluationClassNo != null" >
+        evaluation_class_no = #{evaluationClassNo,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationProfessionNo != null" >
+        evaluation_profession_no = #{evaluationProfessionNo,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationAdd != null" >
+        evaluation_add = #{evaluationAdd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="evaluationUpdate != null" >
+        evaluation_update = #{evaluationUpdate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where evaluation_id = #{evaluationId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.EvaluationAll" >
+    update evaluation_all
+    set evaluation_stu_id = #{evaluationStuId,jdbcType=INTEGER},
+      evaluation_college_id = #{evaluationCollegeId,jdbcType=INTEGER},
+      evaluation_class_code = #{evaluationClassCode,jdbcType=INTEGER},
+      evaluation_year = #{evaluationYear,jdbcType=TINYINT},
+      evaluation_c1 = #{evaluationC1,jdbcType=DOUBLE},
+      evaluation_c2 = #{evaluationC2,jdbcType=DOUBLE},
+      evaluation_s1 = #{evaluationS1,jdbcType=DOUBLE},
+      evaluation_s2 = #{evaluationS2,jdbcType=DOUBLE},
+      evaluation_s3 = #{evaluationS3,jdbcType=DOUBLE},
+      evaluation_w = #{evaluationW,jdbcType=DOUBLE},
+      evaluation_x = #{evaluationX,jdbcType=DOUBLE},
+      evaluation_pinde = #{evaluationPinde,jdbcType=DOUBLE},
+      evaluation_not_pass = #{evaluationNotPass,jdbcType=TINYINT},
+      evaluation_p = #{evaluationP,jdbcType=DOUBLE},
+      evaluation_class_no = #{evaluationClassNo,jdbcType=INTEGER},
+      evaluation_profession_no = #{evaluationProfessionNo,jdbcType=INTEGER},
+      evaluation_add = #{evaluationAdd,jdbcType=TIMESTAMP},
+      evaluation_update = #{evaluationUpdate,jdbcType=TIMESTAMP}
+    where evaluation_id = #{evaluationId,jdbcType=INTEGER}
+  </update>
+</mapper>

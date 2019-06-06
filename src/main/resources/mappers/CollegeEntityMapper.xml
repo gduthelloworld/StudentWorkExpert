@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.CollegeEntityMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.CollegeEntity" >
+    <id column="college_id" property="collegeId" jdbcType="INTEGER" />
+    <result column="college_name" property="collegeName" jdbcType="VARCHAR" />
+    <result column="college_leader_id" property="collegeLeaderId" jdbcType="BIGINT" />
+    <result column="college_class_num" property="collegeClassNum" jdbcType="TINYINT" />
+    <result column="college_state" property="collegeState" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    college_id, college_name, college_leader_id, college_class_num, college_state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from college_list
+    where college_id = #{collegeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from college_list
+    where college_id = #{collegeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.CollegeEntity" >
+    <selectKey resultType="java.lang.Integer" keyProperty="collegeId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into college_list (college_name, college_leader_id, college_class_num, 
+      college_state)
+    values (#{collegeName,jdbcType=VARCHAR}, #{collegeLeaderId,jdbcType=BIGINT}, #{collegeClassNum,jdbcType=TINYINT}, 
+      #{collegeState,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.CollegeEntity" >
+    <selectKey resultType="java.lang.Integer" keyProperty="collegeId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into college_list
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="collegeName != null" >
+        college_name,
+      </if>
+      <if test="collegeLeaderId != null" >
+        college_leader_id,
+      </if>
+      <if test="collegeClassNum != null" >
+        college_class_num,
+      </if>
+      <if test="collegeState != null" >
+        college_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="collegeName != null" >
+        #{collegeName,jdbcType=VARCHAR},
+      </if>
+      <if test="collegeLeaderId != null" >
+        #{collegeLeaderId,jdbcType=BIGINT},
+      </if>
+      <if test="collegeClassNum != null" >
+        #{collegeClassNum,jdbcType=TINYINT},
+      </if>
+      <if test="collegeState != null" >
+        #{collegeState,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.CollegeEntity" >
+    update college_list
+    <set >
+      <if test="collegeName != null" >
+        college_name = #{collegeName,jdbcType=VARCHAR},
+      </if>
+      <if test="collegeLeaderId != null" >
+        college_leader_id = #{collegeLeaderId,jdbcType=BIGINT},
+      </if>
+      <if test="collegeClassNum != null" >
+        college_class_num = #{collegeClassNum,jdbcType=TINYINT},
+      </if>
+      <if test="collegeState != null" >
+        college_state = #{collegeState,jdbcType=TINYINT},
+      </if>
+    </set>
+    where college_id = #{collegeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.CollegeEntity" >
+    update college_list
+    set college_name = #{collegeName,jdbcType=VARCHAR},
+      college_leader_id = #{collegeLeaderId,jdbcType=BIGINT},
+      college_class_num = #{collegeClassNum,jdbcType=TINYINT},
+      college_state = #{collegeState,jdbcType=TINYINT}
+    where college_id = #{collegeId,jdbcType=INTEGER}
+  </update>
+  <select id="selectAll" resultType="edu.gdut.auto.pojo.CollegeEntity">
+    select * from college_list where college_state != 0;
+  </select>
+</mapper>

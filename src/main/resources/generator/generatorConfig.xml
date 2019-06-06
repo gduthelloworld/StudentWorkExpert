@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!-- 配置生成器 -->
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!-- 生成的 Java 文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 格式化 Java 代码 -->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+        <!-- 格式化 XML 代码 -->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 数据库链接URL，用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/studentworkexpert?characterEncoding=UTF-8"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <!-- 类型转换 -->
+        <javaTypeResolver>
+            <!-- 是否使用BigDecimals，false可自动转化以下类型(Long Integer Short等) -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成模型的包名和位置-->
+        <javaModelGenerator targetPackage="edu.gdut.auto.pojo" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 生成映射文件的包名和位置-->
+        <sqlMapGenerator targetPackage="mappers" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成DAO的包名和位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="edu.gdut.auto.mappers" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
+        <!--user_info-->
+        <table tableName="user_info" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="user_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--student_info-->
+        <table tableName="student_info" domainObjectName="Student" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="stu_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--organization_list-->
+        <table tableName="organization_list" domainObjectName="Organization" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="org_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--org_record-->
+        <table tableName="org_record" domainObjectName="OrganizationRecord" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="or_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--login_list-->
+        <table tableName="login_list" domainObjectName="LoginInEntity" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--college_list-->
+        <table tableName="college_list" domainObjectName="CollegeEntity" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="college_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--class_list-->
+        <table tableName="class_list" domainObjectName="ClassEntity" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="class_code" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--evaluation_detail-->
+        <table tableName="evaluation_detail" domainObjectName="EvaluationDetail" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="ce_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--evaluation_all-->
+        <table tableName="evaluation_all" domainObjectName="EvaluationAll" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="evaluation_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--notification_list-->
+        <table tableName="notification_list" domainObjectName="Notification" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="notification_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--activity_list-->
+        <table tableName="activity_list" domainObjectName="ActivityEntity" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="activity_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--activity_record-->
+        <table tableName="activity_record" domainObjectName="ActivityRecord" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 数据库表主键 -->
+            <generatedKey column="acr_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+    </context>
+
+</generatorConfiguration>

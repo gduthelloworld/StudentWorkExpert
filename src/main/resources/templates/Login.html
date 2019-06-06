@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cn" xmlns:th="http://www.springframework.org/schema/jdbc">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆界面</title>
+    <link href="/css/bootstrap.css" rel="stylesheet"/>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script th:src="@{/js/login.js}"></script>
+</head>
+<body style="padding:10px;">
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <img style="width: 80px;" th:src="@{/img/logo.png}"/> 院生通
+                    <small><!--学生工作管理专家--> Student Work Expert</small>
+                </h1>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-8 column">
+                    <div class="jumbotron">
+                        <h1>Hello World！</h1>
+                        <p id="gushi">昔我往矣，杨柳依依。今我来思，雨雪霏霏。</p>
+                        <p> 行道迟迟，载渴载饥。我心伤悲，莫知我哀！</p>
+                    </div>
+                </div>
+                <div class="col-md-4 column"
+                     style="border: 1px solid #ccc!important;padding:14px;border-radius: 16px!important;">
+                    <div class="sys_msg">
+                        <!--此处插入系统消息-->
+                    </div>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="id">学号/账号：</label><input type="text" class="form-control" id="id"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label><input type="password" class="form-control" id="pwd"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Code">验证码：</label>
+                            <div class="form-inline">
+                                <input type="text" class="form-control" id="code"/>
+                                <img id="verCode" src="/verCode" onclick="this.src='/verCode?'+Math.random()"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="remember_me"/>记住我<span id="rememberWord"
+                                                                                         style="color: red;">(公用电脑请不要勾选)</span></label>
+                            </div>
+                        </div>
+                        <div style="margin:20px;">
+                            <button type="button" class="btn btn-success" onclick="login()">&nbsp;提交&nbsp;</button>&nbsp;
+                            <button type="reset" class="btn btn-warning">&nbsp;重置&nbsp;</button>&nbsp;
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#findPwd">
+                                找回密码
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div th:replace="common/footer :: common_footer"></div>
+    </div>
+</div>
+<!--找回密码模态框0604-->
+<!-- Modal -->
+<div class="modal fade" id="findPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">找回密码</h4>
+            </div>
+            <div class="modal-body">
+                <p>这是找回密码的模态框</p>
+                <p>这是找回密码的模态框</p>
+                <p>这是找回密码的模态框</p>
+                <p>这是找回密码的模态框</p>
+                <p>这是找回密码的模态框</p>
+                <p>这是找回密码的模态框</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        // askgushi();
+        if ($.cookie('bit') == 'true') {
+            $('#remember_me').attr('checked', 'checked');
+            $('#id').val($.cookie('username'));
+            $('#pwd').val($.cookie('password'));
+        }
+        /*按下回车键执行login()*/
+        $(document).keydown(function (event) {
+            if (event.keyCode == "13") {
+                login();
+            }
+        });
+        /*(公用电脑请不要勾选)*/
+        $("#remember_me").click(function () {
+                if ($("input[type='checkbox']").prop('checked') == false) {
+                    $("#rememberWord").hide();
+                } else {
+                    $("#rememberWord").show();
+                }
+            }
+        );
+    });
+</script>
+</html>

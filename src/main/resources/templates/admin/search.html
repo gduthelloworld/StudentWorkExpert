@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <!--此处是共用模块的资源部分-->
+    <div th:replace="common/resource :: admin_resource"></div>
+</head>
+<body>
+<!--此处是共用模块的页头部分-->
+<div th:replace="common/header :: admin_header"></div>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div th:replace="common/search :: common_search"></div>
+                </div>
+            </div>
+        </div>
+        <div th:replace="common/footer :: common_footer"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆信息</title>
+    <!--此处是共用模块的页头部分-->
+    <div th:replace="common/resource :: admin_resource"></div>
+</head>
+<body>
+<!--此处是共用模块的页头部分-->
+<div th:replace="common/header :: admin_header"></div>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="row clearfix">
+                <div class="col-md-3 column">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">登陆信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            当前时间为
+                        </div>
+                        <div class="panel-footer">
+                            Panel footer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 column">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>登陆时间</th>
+                                <th>登陆IP</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div th:replace="common/footer :: common_footer"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.ClassEntityMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.ClassEntity" >
+    <id column="class_code" property="classCode" jdbcType="SMALLINT" />
+    <result column="class_name" property="className" jdbcType="VARCHAR" />
+    <result column="class_grade" property="classGrade" jdbcType="SMALLINT" />
+    <result column="class_profession" property="classProfession" jdbcType="VARCHAR" />
+    <result column="class_college" property="classCollege" jdbcType="VARCHAR" />
+    <result column="class_college_id" property="classCollegeId" jdbcType="INTEGER" />
+    <result column="class_num" property="classNum" jdbcType="SMALLINT" />
+    <result column="class_fdy_id" property="classFdyId" jdbcType="BIGINT" />
+    <result column="class_leader_id" property="classLeaderId" jdbcType="BIGINT" />
+    <result column="class_state" property="classState" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    class_code, class_name, class_grade, class_profession, class_college, class_college_id, 
+    class_num, class_fdy_id, class_leader_id, class_state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Short" >
+    select 
+    <include refid="Base_Column_List" />
+    from class_list
+    where class_code = #{classCode,jdbcType=SMALLINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short" >
+    delete from class_list
+    where class_code = #{classCode,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.ClassEntity" >
+    <selectKey resultType="java.lang.Short" keyProperty="classCode" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into class_list (class_name, class_grade, class_profession, 
+      class_college, class_college_id, class_num, 
+      class_fdy_id, class_leader_id, class_state
+      )
+    values (#{className,jdbcType=VARCHAR}, #{classGrade,jdbcType=SMALLINT}, #{classProfession,jdbcType=VARCHAR}, 
+      #{classCollege,jdbcType=VARCHAR}, #{classCollegeId,jdbcType=INTEGER}, #{classNum,jdbcType=SMALLINT}, 
+      #{classFdyId,jdbcType=BIGINT}, #{classLeaderId,jdbcType=BIGINT}, #{classState,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.ClassEntity" >
+    <selectKey resultType="java.lang.Short" keyProperty="classCode" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into class_list
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="className != null" >
+        class_name,
+      </if>
+      <if test="classGrade != null" >
+        class_grade,
+      </if>
+      <if test="classProfession != null" >
+        class_profession,
+      </if>
+      <if test="classCollege != null" >
+        class_college,
+      </if>
+      <if test="classCollegeId != null" >
+        class_college_id,
+      </if>
+      <if test="classNum != null" >
+        class_num,
+      </if>
+      <if test="classFdyId != null" >
+        class_fdy_id,
+      </if>
+      <if test="classLeaderId != null" >
+        class_leader_id,
+      </if>
+      <if test="classState != null" >
+        class_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="className != null" >
+        #{className,jdbcType=VARCHAR},
+      </if>
+      <if test="classGrade != null" >
+        #{classGrade,jdbcType=SMALLINT},
+      </if>
+      <if test="classProfession != null" >
+        #{classProfession,jdbcType=VARCHAR},
+      </if>
+      <if test="classCollege != null" >
+        #{classCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="classCollegeId != null" >
+        #{classCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="classNum != null" >
+        #{classNum,jdbcType=SMALLINT},
+      </if>
+      <if test="classFdyId != null" >
+        #{classFdyId,jdbcType=BIGINT},
+      </if>
+      <if test="classLeaderId != null" >
+        #{classLeaderId,jdbcType=BIGINT},
+      </if>
+      <if test="classState != null" >
+        #{classState,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.ClassEntity" >
+    update class_list
+    <set >
+      <if test="className != null" >
+        class_name = #{className,jdbcType=VARCHAR},
+      </if>
+      <if test="classGrade != null" >
+        class_grade = #{classGrade,jdbcType=SMALLINT},
+      </if>
+      <if test="classProfession != null" >
+        class_profession = #{classProfession,jdbcType=VARCHAR},
+      </if>
+      <if test="classCollege != null" >
+        class_college = #{classCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="classCollegeId != null" >
+        class_college_id = #{classCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="classNum != null" >
+        class_num = #{classNum,jdbcType=SMALLINT},
+      </if>
+      <if test="classFdyId != null" >
+        class_fdy_id = #{classFdyId,jdbcType=BIGINT},
+      </if>
+      <if test="classLeaderId != null" >
+        class_leader_id = #{classLeaderId,jdbcType=BIGINT},
+      </if>
+      <if test="classState != null" >
+        class_state = #{classState,jdbcType=TINYINT},
+      </if>
+    </set>
+    where class_code = #{classCode,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.ClassEntity" >
+    update class_list
+    set class_name = #{className,jdbcType=VARCHAR},
+      class_grade = #{classGrade,jdbcType=SMALLINT},
+      class_profession = #{classProfession,jdbcType=VARCHAR},
+      class_college = #{classCollege,jdbcType=VARCHAR},
+      class_college_id = #{classCollegeId,jdbcType=INTEGER},
+      class_num = #{classNum,jdbcType=SMALLINT},
+      class_fdy_id = #{classFdyId,jdbcType=BIGINT},
+      class_leader_id = #{classLeaderId,jdbcType=BIGINT},
+      class_state = #{classState,jdbcType=TINYINT}
+    where class_code = #{classCode,jdbcType=SMALLINT}
+  </update>
+  <select id="selectByCollegeId" resultType="edu.gdut.auto.pojo.ClassEntity">
+    select
+    <include refid="Base_Column_List" />
+    from class_list
+    where class_college_id = #{collegeId,jdbcType=INTEGER}
+    and class_state != 0
+  </select>
+</mapper>

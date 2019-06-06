@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.NotificationMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.Notification" >
+    <id column="notification_id" property="notificationId" jdbcType="INTEGER" />
+    <result column="notification_type" property="notificationType" jdbcType="TINYINT" />
+    <result column="notification_state" property="notificationState" jdbcType="TINYINT" />
+    <result column="notification_college" property="notificationCollege" jdbcType="INTEGER" />
+    <result column="notification_sender" property="notificationSender" jdbcType="BIGINT" />
+    <result column="notification_title" property="notificationTitle" jdbcType="VARCHAR" />
+    <result column="notification_topic" property="notificationTopic" jdbcType="VARCHAR" />
+    <result column="notification_add_time" property="notificationAddTime" jdbcType="TIMESTAMP" />
+    <result column="notification_update" property="notificationUpdate" jdbcType="TIMESTAMP" />
+    <result column="notification_close" property="notificationClose" jdbcType="TIMESTAMP" />
+    <result column="notification_range" property="notificationRange" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="edu.gdut.auto.pojo.Notification" extends="BaseResultMap" >
+    <result column="notification_detail" property="notificationDetail" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    notification_id, notification_type, notification_state, notification_college, notification_sender, 
+    notification_title, notification_topic, notification_add_time, notification_update, 
+    notification_close, notification_range
+  </sql>
+  <sql id="Blob_Column_List" >
+    notification_detail
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from notification_list
+    where notification_id = #{notificationId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from notification_list
+    where notification_id = #{notificationId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.Notification" >
+    <selectKey resultType="java.lang.Integer" keyProperty="notificationId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into notification_list (notification_type, notification_state, 
+      notification_college, notification_sender, 
+      notification_title, notification_topic, notification_add_time, 
+      notification_update, notification_close, 
+      notification_range, notification_detail
+      )
+    values (#{notificationType,jdbcType=TINYINT}, #{notificationState,jdbcType=TINYINT}, 
+      #{notificationCollege,jdbcType=INTEGER}, #{notificationSender,jdbcType=BIGINT}, 
+      #{notificationTitle,jdbcType=VARCHAR}, #{notificationTopic,jdbcType=VARCHAR}, #{notificationAddTime,jdbcType=TIMESTAMP}, 
+      #{notificationUpdate,jdbcType=TIMESTAMP}, #{notificationClose,jdbcType=TIMESTAMP}, 
+      #{notificationRange,jdbcType=VARCHAR}, #{notificationDetail,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.Notification" >
+    <selectKey resultType="java.lang.Integer" keyProperty="notificationId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into notification_list
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="notificationType != null" >
+        notification_type,
+      </if>
+      <if test="notificationState != null" >
+        notification_state,
+      </if>
+      <if test="notificationCollege != null" >
+        notification_college,
+      </if>
+      <if test="notificationSender != null" >
+        notification_sender,
+      </if>
+      <if test="notificationTitle != null" >
+        notification_title,
+      </if>
+      <if test="notificationTopic != null" >
+        notification_topic,
+      </if>
+      <if test="notificationAddTime != null" >
+        notification_add_time,
+      </if>
+      <if test="notificationUpdate != null" >
+        notification_update,
+      </if>
+      <if test="notificationClose != null" >
+        notification_close,
+      </if>
+      <if test="notificationRange != null" >
+        notification_range,
+      </if>
+      <if test="notificationDetail != null" >
+        notification_detail,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="notificationType != null" >
+        #{notificationType,jdbcType=TINYINT},
+      </if>
+      <if test="notificationState != null" >
+        #{notificationState,jdbcType=TINYINT},
+      </if>
+      <if test="notificationCollege != null" >
+        #{notificationCollege,jdbcType=INTEGER},
+      </if>
+      <if test="notificationSender != null" >
+        #{notificationSender,jdbcType=BIGINT},
+      </if>
+      <if test="notificationTitle != null" >
+        #{notificationTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationTopic != null" >
+        #{notificationTopic,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationAddTime != null" >
+        #{notificationAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notificationUpdate != null" >
+        #{notificationUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notificationClose != null" >
+        #{notificationClose,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notificationRange != null" >
+        #{notificationRange,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationDetail != null" >
+        #{notificationDetail,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.Notification" >
+    update notification_list
+    <set >
+      <if test="notificationType != null" >
+        notification_type = #{notificationType,jdbcType=TINYINT},
+      </if>
+      <if test="notificationState != null" >
+        notification_state = #{notificationState,jdbcType=TINYINT},
+      </if>
+      <if test="notificationCollege != null" >
+        notification_college = #{notificationCollege,jdbcType=INTEGER},
+      </if>
+      <if test="notificationSender != null" >
+        notification_sender = #{notificationSender,jdbcType=BIGINT},
+      </if>
+      <if test="notificationTitle != null" >
+        notification_title = #{notificationTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationTopic != null" >
+        notification_topic = #{notificationTopic,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationAddTime != null" >
+        notification_add_time = #{notificationAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notificationUpdate != null" >
+        notification_update = #{notificationUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notificationClose != null" >
+        notification_close = #{notificationClose,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notificationRange != null" >
+        notification_range = #{notificationRange,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationDetail != null" >
+        notification_detail = #{notificationDetail,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where notification_id = #{notificationId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="edu.gdut.auto.pojo.Notification" >
+    update notification_list
+    set notification_type = #{notificationType,jdbcType=TINYINT},
+      notification_state = #{notificationState,jdbcType=TINYINT},
+      notification_college = #{notificationCollege,jdbcType=INTEGER},
+      notification_sender = #{notificationSender,jdbcType=BIGINT},
+      notification_title = #{notificationTitle,jdbcType=VARCHAR},
+      notification_topic = #{notificationTopic,jdbcType=VARCHAR},
+      notification_add_time = #{notificationAddTime,jdbcType=TIMESTAMP},
+      notification_update = #{notificationUpdate,jdbcType=TIMESTAMP},
+      notification_close = #{notificationClose,jdbcType=TIMESTAMP},
+      notification_range = #{notificationRange,jdbcType=VARCHAR},
+      notification_detail = #{notificationDetail,jdbcType=LONGVARCHAR}
+    where notification_id = #{notificationId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.Notification" >
+    update notification_list
+    set notification_type = #{notificationType,jdbcType=TINYINT},
+      notification_state = #{notificationState,jdbcType=TINYINT},
+      notification_college = #{notificationCollege,jdbcType=INTEGER},
+      notification_sender = #{notificationSender,jdbcType=BIGINT},
+      notification_title = #{notificationTitle,jdbcType=VARCHAR},
+      notification_topic = #{notificationTopic,jdbcType=VARCHAR},
+      notification_add_time = #{notificationAddTime,jdbcType=TIMESTAMP},
+      notification_update = #{notificationUpdate,jdbcType=TIMESTAMP},
+      notification_close = #{notificationClose,jdbcType=TIMESTAMP},
+      notification_range = #{notificationRange,jdbcType=VARCHAR}
+    where notification_id = #{notificationId,jdbcType=INTEGER}
+  </update>
+</mapper>

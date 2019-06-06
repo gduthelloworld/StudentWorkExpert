@@ -1,0 +1,67 @@
+#打包jar 指令：mvn clean package -Dmaven.test.skip=true
+
+server:
+  port: 8000  #  配置启动端口号
+
+spring:
+  # spring boot使用外部资源文件
+  mvc:
+    #所有的访问都经过静态资源路径
+    static-path-pattern: /**
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #  配置当前要使用的数据源的操作类型
+    driver-class-name: com.mysql.jdbc.Driver    #  配置mysql的驱动程序类
+    url: jdbc:mysql://localhost:3306/studentworkexpert?useUnicode=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC         #  数据库连接地址
+    username: root                                 #  数据库用户名
+    password: MyNewPass4!                              #  数据库密码
+    filters: stat,wall,log4j                      #  配置druid过滤器，开启监控
+    dbcp2:                                        #  进行数据库连接池的配置
+      min-idle: 5                                 #  数据库连接池的最小维持连接数
+      initial-size: 5                             #  初始化提供的连接数
+      max-total: 5                                #  最大连接数
+      max-wait-millis: 200                        #  等待连接获取的最大超时时间
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    servlet.content-type: text/html
+    cache: false
+  servlet:
+    multipart:
+      max-request-size: 10MB  # 上传文件的最大值
+      max-file-size: 10MB  # 单个文件的最大值
+#mybatis是一级目录，别搞错了，yml不报错的。
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapperLocations: classpath:mappers/*.xml
+  typeAliasesPackage: edu.gdut.auto.pojo
+
+
+pagehelper:                       #pagehelper分页插件
+  helperDialect: mysql          #设置数据库方言
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+#配置日志
+logging:
+  #配置日志文件路径
+  level:
+    edu.gdut.auto: debug #不同目录下的日志可配置不同级别
+    org.springfromework.web: info
+    org.hibernate: error
+  #采用相对路径方式将日志文件输出到【log\myspringboot.log】
+  file: log/myspringboot.log
+
+#自己定义的
+#定义在此处有助于，统一管理配置文件，免得到处修改密码，路径等。
+file:
+  rootPath: /root/jar
+  filePath: /static/upload/
+  userPicPath: /static/upload/userPic/
+
+
+
+
+

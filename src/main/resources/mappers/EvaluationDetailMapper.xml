@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.EvaluationDetailMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.EvaluationDetail" >
+    <id column="ce_id" property="ceId" jdbcType="BIGINT" />
+    <result column="ce_year" property="ceYear" jdbcType="TINYINT" />
+    <result column="ce_college_id" property="ceCollegeId" jdbcType="INTEGER" />
+    <result column="ce_stu_class_code" property="ceStuClassCode" jdbcType="SMALLINT" />
+    <result column="ce_type" property="ceType" jdbcType="TINYINT" />
+    <result column="ce_level" property="ceLevel" jdbcType="TINYINT" />
+    <result column="ce_state" property="ceState" jdbcType="TINYINT" />
+    <result column="ce_name" property="ceName" jdbcType="VARCHAR" />
+    <result column="ce_unit" property="ceUnit" jdbcType="VARCHAR" />
+    <result column="ce_time" property="ceTime" jdbcType="DATE" />
+    <result column="ce_is_prove" property="ceIsProve" jdbcType="TINYINT" />
+    <result column="ce_add_time" property="ceAddTime" jdbcType="TIMESTAMP" />
+    <result column="ce_update_time" property="ceUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="ce_add_person_id" property="ceAddPersonId" jdbcType="BIGINT" />
+    <result column="ce_remark" property="ceRemark" jdbcType="VARCHAR" />
+    <result column="ce_degree" property="ceDegree" jdbcType="TINYINT" />
+    <result column="ce_point" property="cePoint" jdbcType="DOUBLE" />
+    <result column="ce_stu_id" property="ceStuId" jdbcType="BIGINT" />
+    <result column="ce_check_id" property="ceCheckId" jdbcType="BIGINT" />
+    <result column="ce_reply" property="ceReply" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ce_id, ce_year, ce_college_id, ce_stu_class_code, ce_type, ce_level, ce_state, ce_name, 
+    ce_unit, ce_time, ce_is_prove, ce_add_time, ce_update_time, ce_add_person_id, ce_remark, 
+    ce_degree, ce_point, ce_stu_id, ce_check_id, ce_reply
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from evaluation_detail
+    where ce_id = #{ceId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from evaluation_detail
+    where ce_id = #{ceId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.EvaluationDetail" >
+    <selectKey resultType="java.lang.Long" keyProperty="ceId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into evaluation_detail (ce_year, ce_college_id, ce_stu_class_code, 
+      ce_type, ce_level, ce_state, 
+      ce_name, ce_unit, ce_time, 
+      ce_is_prove, ce_add_time, ce_update_time, 
+      ce_add_person_id, ce_remark, ce_degree, 
+      ce_point, ce_stu_id, ce_check_id, 
+      ce_reply)
+    values (#{ceYear,jdbcType=TINYINT}, #{ceCollegeId,jdbcType=INTEGER}, #{ceStuClassCode,jdbcType=SMALLINT}, 
+      #{ceType,jdbcType=TINYINT}, #{ceLevel,jdbcType=TINYINT}, #{ceState,jdbcType=TINYINT}, 
+      #{ceName,jdbcType=VARCHAR}, #{ceUnit,jdbcType=VARCHAR}, #{ceTime,jdbcType=DATE}, 
+      #{ceIsProve,jdbcType=TINYINT}, #{ceAddTime,jdbcType=TIMESTAMP}, #{ceUpdateTime,jdbcType=TIMESTAMP}, 
+      #{ceAddPersonId,jdbcType=BIGINT}, #{ceRemark,jdbcType=VARCHAR}, #{ceDegree,jdbcType=TINYINT}, 
+      #{cePoint,jdbcType=DOUBLE}, #{ceStuId,jdbcType=BIGINT}, #{ceCheckId,jdbcType=BIGINT}, 
+      #{ceReply,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.EvaluationDetail" >
+    <selectKey resultType="java.lang.Long" keyProperty="ceId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into evaluation_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ceYear != null" >
+        ce_year,
+      </if>
+      <if test="ceCollegeId != null" >
+        ce_college_id,
+      </if>
+      <if test="ceStuClassCode != null" >
+        ce_stu_class_code,
+      </if>
+      <if test="ceType != null" >
+        ce_type,
+      </if>
+      <if test="ceLevel != null" >
+        ce_level,
+      </if>
+      <if test="ceState != null" >
+        ce_state,
+      </if>
+      <if test="ceName != null" >
+        ce_name,
+      </if>
+      <if test="ceUnit != null" >
+        ce_unit,
+      </if>
+      <if test="ceTime != null" >
+        ce_time,
+      </if>
+      <if test="ceIsProve != null" >
+        ce_is_prove,
+      </if>
+      <if test="ceAddTime != null" >
+        ce_add_time,
+      </if>
+      <if test="ceUpdateTime != null" >
+        ce_update_time,
+      </if>
+      <if test="ceAddPersonId != null" >
+        ce_add_person_id,
+      </if>
+      <if test="ceRemark != null" >
+        ce_remark,
+      </if>
+      <if test="ceDegree != null" >
+        ce_degree,
+      </if>
+      <if test="cePoint != null" >
+        ce_point,
+      </if>
+      <if test="ceStuId != null" >
+        ce_stu_id,
+      </if>
+      <if test="ceCheckId != null" >
+        ce_check_id,
+      </if>
+      <if test="ceReply != null" >
+        ce_reply,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ceYear != null" >
+        #{ceYear,jdbcType=TINYINT},
+      </if>
+      <if test="ceCollegeId != null" >
+        #{ceCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="ceStuClassCode != null" >
+        #{ceStuClassCode,jdbcType=SMALLINT},
+      </if>
+      <if test="ceType != null" >
+        #{ceType,jdbcType=TINYINT},
+      </if>
+      <if test="ceLevel != null" >
+        #{ceLevel,jdbcType=TINYINT},
+      </if>
+      <if test="ceState != null" >
+        #{ceState,jdbcType=TINYINT},
+      </if>
+      <if test="ceName != null" >
+        #{ceName,jdbcType=VARCHAR},
+      </if>
+      <if test="ceUnit != null" >
+        #{ceUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="ceTime != null" >
+        #{ceTime,jdbcType=DATE},
+      </if>
+      <if test="ceIsProve != null" >
+        #{ceIsProve,jdbcType=TINYINT},
+      </if>
+      <if test="ceAddTime != null" >
+        #{ceAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ceUpdateTime != null" >
+        #{ceUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ceAddPersonId != null" >
+        #{ceAddPersonId,jdbcType=BIGINT},
+      </if>
+      <if test="ceRemark != null" >
+        #{ceRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="ceDegree != null" >
+        #{ceDegree,jdbcType=TINYINT},
+      </if>
+      <if test="cePoint != null" >
+        #{cePoint,jdbcType=DOUBLE},
+      </if>
+      <if test="ceStuId != null" >
+        #{ceStuId,jdbcType=BIGINT},
+      </if>
+      <if test="ceCheckId != null" >
+        #{ceCheckId,jdbcType=BIGINT},
+      </if>
+      <if test="ceReply != null" >
+        #{ceReply,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.EvaluationDetail" >
+    update evaluation_detail
+    <set >
+      <if test="ceYear != null" >
+        ce_year = #{ceYear,jdbcType=TINYINT},
+      </if>
+      <if test="ceCollegeId != null" >
+        ce_college_id = #{ceCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="ceStuClassCode != null" >
+        ce_stu_class_code = #{ceStuClassCode,jdbcType=SMALLINT},
+      </if>
+      <if test="ceType != null" >
+        ce_type = #{ceType,jdbcType=TINYINT},
+      </if>
+      <if test="ceLevel != null" >
+        ce_level = #{ceLevel,jdbcType=TINYINT},
+      </if>
+      <if test="ceState != null" >
+        ce_state = #{ceState,jdbcType=TINYINT},
+      </if>
+      <if test="ceName != null" >
+        ce_name = #{ceName,jdbcType=VARCHAR},
+      </if>
+      <if test="ceUnit != null" >
+        ce_unit = #{ceUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="ceTime != null" >
+        ce_time = #{ceTime,jdbcType=DATE},
+      </if>
+      <if test="ceIsProve != null" >
+        ce_is_prove = #{ceIsProve,jdbcType=TINYINT},
+      </if>
+      <if test="ceAddTime != null" >
+        ce_add_time = #{ceAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ceUpdateTime != null" >
+        ce_update_time = #{ceUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ceAddPersonId != null" >
+        ce_add_person_id = #{ceAddPersonId,jdbcType=BIGINT},
+      </if>
+      <if test="ceRemark != null" >
+        ce_remark = #{ceRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="ceDegree != null" >
+        ce_degree = #{ceDegree,jdbcType=TINYINT},
+      </if>
+      <if test="cePoint != null" >
+        ce_point = #{cePoint,jdbcType=DOUBLE},
+      </if>
+      <if test="ceStuId != null" >
+        ce_stu_id = #{ceStuId,jdbcType=BIGINT},
+      </if>
+      <if test="ceCheckId != null" >
+        ce_check_id = #{ceCheckId,jdbcType=BIGINT},
+      </if>
+      <if test="ceReply != null" >
+        ce_reply = #{ceReply,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ce_id = #{ceId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.EvaluationDetail" >
+    update evaluation_detail
+    set ce_year = #{ceYear,jdbcType=TINYINT},
+      ce_college_id = #{ceCollegeId,jdbcType=INTEGER},
+      ce_stu_class_code = #{ceStuClassCode,jdbcType=SMALLINT},
+      ce_type = #{ceType,jdbcType=TINYINT},
+      ce_level = #{ceLevel,jdbcType=TINYINT},
+      ce_state = #{ceState,jdbcType=TINYINT},
+      ce_name = #{ceName,jdbcType=VARCHAR},
+      ce_unit = #{ceUnit,jdbcType=VARCHAR},
+      ce_time = #{ceTime,jdbcType=DATE},
+      ce_is_prove = #{ceIsProve,jdbcType=TINYINT},
+      ce_add_time = #{ceAddTime,jdbcType=TIMESTAMP},
+      ce_update_time = #{ceUpdateTime,jdbcType=TIMESTAMP},
+      ce_add_person_id = #{ceAddPersonId,jdbcType=BIGINT},
+      ce_remark = #{ceRemark,jdbcType=VARCHAR},
+      ce_degree = #{ceDegree,jdbcType=TINYINT},
+      ce_point = #{cePoint,jdbcType=DOUBLE},
+      ce_stu_id = #{ceStuId,jdbcType=BIGINT},
+      ce_check_id = #{ceCheckId,jdbcType=BIGINT},
+      ce_reply = #{ceReply,jdbcType=VARCHAR}
+    where ce_id = #{ceId,jdbcType=BIGINT}
+  </update>
+</mapper>

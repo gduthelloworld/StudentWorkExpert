@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.StudentMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.Student" >
+    <id column="stu_id" property="stuId" jdbcType="BIGINT" />
+    <result column="stu_name" property="stuName" jdbcType="VARCHAR" />
+    <result column="stu_sex" property="stuSex" jdbcType="TINYINT" />
+    <result column="stu_college" property="stuCollege" jdbcType="VARCHAR" />
+    <result column="stu_college_id" property="stuCollegeId" jdbcType="INTEGER" />
+    <result column="stu_class_code" property="stuClassCode" jdbcType="SMALLINT" />
+    <result column="stu_class_name" property="stuClassName" jdbcType="VARCHAR" />
+    <result column="stu_grade" property="stuGrade" jdbcType="SMALLINT" />
+    <result column="stu_profession" property="stuProfession" jdbcType="SMALLINT" />
+    <result column="stu_personal_id" property="stuPersonalId" jdbcType="VARCHAR" />
+    <result column="stu_phone" property="stuPhone" jdbcType="VARCHAR" />
+    <result column="stu_poor" property="stuPoor" jdbcType="TINYINT" />
+    <result column="stu_add_time" property="stuAddTime" jdbcType="TIMESTAMP" />
+    <result column="stu_pic" property="stuPic" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    stu_id, stu_name, stu_sex, stu_college, stu_college_id, stu_class_code, stu_class_name, 
+    stu_grade, stu_profession, stu_personal_id, stu_phone, stu_poor, stu_add_time, stu_pic
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from student_info
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from student_info
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.Student" >
+    <selectKey resultType="java.lang.Long" keyProperty="stuId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into student_info (stu_name, stu_sex, stu_college, 
+      stu_college_id, stu_class_code, stu_class_name, 
+      stu_grade, stu_profession, stu_personal_id, 
+      stu_phone, stu_poor, stu_add_time, 
+      stu_pic)
+    values (#{stuName,jdbcType=VARCHAR}, #{stuSex,jdbcType=TINYINT}, #{stuCollege,jdbcType=VARCHAR}, 
+      #{stuCollegeId,jdbcType=INTEGER}, #{stuClassCode,jdbcType=SMALLINT}, #{stuClassName,jdbcType=VARCHAR}, 
+      #{stuGrade,jdbcType=SMALLINT}, #{stuProfession,jdbcType=SMALLINT}, #{stuPersonalId,jdbcType=VARCHAR}, 
+      #{stuPhone,jdbcType=VARCHAR}, #{stuPoor,jdbcType=TINYINT}, #{stuAddTime,jdbcType=TIMESTAMP}, 
+      #{stuPic,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.Student" >
+    <selectKey resultType="java.lang.Long" keyProperty="stuId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into student_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="stuName != null" >
+        stu_name,
+      </if>
+      <if test="stuSex != null" >
+        stu_sex,
+      </if>
+      <if test="stuCollege != null" >
+        stu_college,
+      </if>
+      <if test="stuCollegeId != null" >
+        stu_college_id,
+      </if>
+      <if test="stuClassCode != null" >
+        stu_class_code,
+      </if>
+      <if test="stuClassName != null" >
+        stu_class_name,
+      </if>
+      <if test="stuGrade != null" >
+        stu_grade,
+      </if>
+      <if test="stuProfession != null" >
+        stu_profession,
+      </if>
+      <if test="stuPersonalId != null" >
+        stu_personal_id,
+      </if>
+      <if test="stuPhone != null" >
+        stu_phone,
+      </if>
+      <if test="stuPoor != null" >
+        stu_poor,
+      </if>
+      <if test="stuAddTime != null" >
+        stu_add_time,
+      </if>
+      <if test="stuPic != null" >
+        stu_pic,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="stuName != null" >
+        #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="stuSex != null" >
+        #{stuSex,jdbcType=TINYINT},
+      </if>
+      <if test="stuCollege != null" >
+        #{stuCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="stuCollegeId != null" >
+        #{stuCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="stuClassCode != null" >
+        #{stuClassCode,jdbcType=SMALLINT},
+      </if>
+      <if test="stuClassName != null" >
+        #{stuClassName,jdbcType=VARCHAR},
+      </if>
+      <if test="stuGrade != null" >
+        #{stuGrade,jdbcType=SMALLINT},
+      </if>
+      <if test="stuProfession != null" >
+        #{stuProfession,jdbcType=SMALLINT},
+      </if>
+      <if test="stuPersonalId != null" >
+        #{stuPersonalId,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPhone != null" >
+        #{stuPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPoor != null" >
+        #{stuPoor,jdbcType=TINYINT},
+      </if>
+      <if test="stuAddTime != null" >
+        #{stuAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="stuPic != null" >
+        #{stuPic,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.Student" >
+    update student_info
+    <set >
+      <if test="stuName != null" >
+        stu_name = #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="stuSex != null" >
+        stu_sex = #{stuSex,jdbcType=TINYINT},
+      </if>
+      <if test="stuCollege != null" >
+        stu_college = #{stuCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="stuCollegeId != null" >
+        stu_college_id = #{stuCollegeId,jdbcType=INTEGER},
+      </if>
+      <if test="stuClassCode != null" >
+        stu_class_code = #{stuClassCode,jdbcType=SMALLINT},
+      </if>
+      <if test="stuClassName != null" >
+        stu_class_name = #{stuClassName,jdbcType=VARCHAR},
+      </if>
+      <if test="stuGrade != null" >
+        stu_grade = #{stuGrade,jdbcType=SMALLINT},
+      </if>
+      <if test="stuProfession != null" >
+        stu_profession = #{stuProfession,jdbcType=SMALLINT},
+      </if>
+      <if test="stuPersonalId != null" >
+        stu_personal_id = #{stuPersonalId,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPhone != null" >
+        stu_phone = #{stuPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPoor != null" >
+        stu_poor = #{stuPoor,jdbcType=TINYINT},
+      </if>
+      <if test="stuAddTime != null" >
+        stu_add_time = #{stuAddTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="stuPic != null" >
+        stu_pic = #{stuPic,jdbcType=BIGINT},
+      </if>
+    </set>
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.Student" >
+    update student_info
+    set stu_name = #{stuName,jdbcType=VARCHAR},
+      stu_sex = #{stuSex,jdbcType=TINYINT},
+      stu_college = #{stuCollege,jdbcType=VARCHAR},
+      stu_college_id = #{stuCollegeId,jdbcType=INTEGER},
+      stu_class_code = #{stuClassCode,jdbcType=SMALLINT},
+      stu_class_name = #{stuClassName,jdbcType=VARCHAR},
+      stu_grade = #{stuGrade,jdbcType=SMALLINT},
+      stu_profession = #{stuProfession,jdbcType=SMALLINT},
+      stu_personal_id = #{stuPersonalId,jdbcType=VARCHAR},
+      stu_phone = #{stuPhone,jdbcType=VARCHAR},
+      stu_poor = #{stuPoor,jdbcType=TINYINT},
+      stu_add_time = #{stuAddTime,jdbcType=TIMESTAMP},
+      stu_pic = #{stuPic,jdbcType=BIGINT}
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </update>
+  <select id="selectByStuId" resultType="Student">
+    select
+    <include refid="Base_Column_List" />
+    from student_info
+    where stu_id like "%"#{stuId}"%"
+    limit 10
+  </select>
+  <select id="selectByStuName" resultType="Student">
+    select
+    <include refid="Base_Column_List" />
+    from student_info
+    where stu_name like  "%"#{stuName}"%"
+    limit 10
+  </select>
+
+</mapper>
