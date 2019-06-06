@@ -1,0 +1,266 @@
+2019-06-06 13:55:57.626  INFO 8296 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Starting StudentWorkExpertApplication on DESKTOP-QVLLDMT with PID 8296 (started by 陆拾壹 in C:\Users\陆拾壹\Desktop\院生通\源代码\StudentWorkExpert)
+2019-06-06 13:55:57.636 DEBUG 8296 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 13:55:57.637  INFO 8296 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : No active profile set, falling back to default profiles: default
+2019-06-06 13:55:57.697  INFO 8296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-06 13:55:57.697  INFO 8296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-06 13:55:58.691  INFO 8296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 13:55:58.693  INFO 8296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 13:55:58.742  INFO 8296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-06-06 13:55:59.054  INFO 8296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$51acb66b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 13:55:59.456  INFO 8296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-06-06 13:55:59.478  INFO 8296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 13:55:59.479  INFO 8296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-06 13:55:59.614  INFO 8296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 13:55:59.615  INFO 8296 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1918 ms
+2019-06-06 13:56:00.287  INFO 8296 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 13:56:00.859  INFO 8296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-06 13:56:00.918  INFO 8296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-06-06 13:56:00.921  INFO 8296 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Started StudentWorkExpertApplication in 3.853 seconds (JVM running for 5.883)
+2019-06-06 13:56:00.984  INFO 8296 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-06 13:56:00.984  INFO 8296 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-06 13:56:00.991  INFO 8296 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-06-06 13:56:09.580 ERROR 8296 --- [http-nio-8000-exec-8] e.g.auto.Exception.MyExceptionHandler    : 【异常捕获】[null]null
+2019-06-06 13:56:09.626  WARN 8296 --- [http-nio-8000-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2019-06-06 16:21:08.735  INFO 4072 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Starting StudentWorkExpertApplication on DESKTOP-QVLLDMT with PID 4072 (started by 陆拾壹 in C:\Users\陆拾壹\Desktop\院生通\源代码\StudentWorkExpert)
+2019-06-06 16:21:08.739 DEBUG 4072 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 16:21:08.740  INFO 4072 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : No active profile set, falling back to default profiles: default
+2019-06-06 16:21:08.802  INFO 4072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-06 16:21:08.802  INFO 4072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-06 16:21:09.605  INFO 4072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 16:21:09.607  INFO 4072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 16:21:09.655  INFO 4072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-06-06 16:21:10.037  INFO 4072 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd583b10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 16:21:10.385  INFO 4072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-06-06 16:21:10.409  INFO 4072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 16:21:10.415  INFO 4072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-06 16:21:10.545  INFO 4072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 16:21:10.545  INFO 4072 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1743 ms
+2019-06-06 16:21:11.137  INFO 4072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 16:21:11.677  INFO 4072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-06 16:21:11.722  INFO 4072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-06-06 16:21:11.724  INFO 4072 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Started StudentWorkExpertApplication in 3.701 seconds (JVM running for 4.671)
+2019-06-06 16:26:08.488  INFO 6260 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Starting StudentWorkExpertApplication on DESKTOP-QVLLDMT with PID 6260 (started by 陆拾壹 in C:\Users\陆拾壹\Desktop\院生通\源代码\StudentWorkExpert)
+2019-06-06 16:26:08.490 DEBUG 6260 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 16:26:08.491  INFO 6260 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : No active profile set, falling back to default profiles: default
+2019-06-06 16:26:08.544  INFO 6260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-06 16:26:08.544  INFO 6260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-06 16:26:09.366  INFO 6260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 16:26:09.375  INFO 6260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 16:26:09.424  INFO 6260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2019-06-06 16:26:09.722  INFO 6260 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ac6a7f0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 16:26:10.041  INFO 6260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-06-06 16:26:10.058  INFO 6260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 16:26:10.058  INFO 6260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-06 16:26:10.185  INFO 6260 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 16:26:10.185  INFO 6260 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1641 ms
+2019-06-06 16:26:10.756  INFO 6260 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 16:26:11.275  INFO 6260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-06 16:26:11.324  INFO 6260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-06-06 16:26:11.328  INFO 6260 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Started StudentWorkExpertApplication in 3.534 seconds (JVM running for 4.413)
+2019-06-06 16:32:59.953  INFO 11392 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Starting StudentWorkExpertApplication on DESKTOP-QVLLDMT with PID 11392 (started by 陆拾壹 in C:\Users\陆拾壹\Desktop\院生通\源代码\StudentWorkExpert)
+2019-06-06 16:32:59.953 DEBUG 11392 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 16:32:59.953  INFO 11392 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : No active profile set, falling back to default profiles: default
+2019-06-06 16:32:59.984  INFO 11392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-06 16:32:59.984  INFO 11392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-06 16:33:00.699  INFO 11392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 16:33:00.701  INFO 11392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 16:33:00.753  INFO 11392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+2019-06-06 16:33:01.040  INFO 11392 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d75b4f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 16:33:01.368  INFO 11392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-06-06 16:33:01.389  INFO 11392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 16:33:01.389  INFO 11392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-06 16:33:01.514  INFO 11392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 16:33:01.514  INFO 11392 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1530 ms
+2019-06-06 16:33:02.097  INFO 11392 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 16:33:02.625  INFO 11392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-06 16:33:02.668  INFO 11392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-06-06 16:33:02.671  INFO 11392 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Started StudentWorkExpertApplication in 3.287 seconds (JVM running for 4.611)
+2019-06-06 19:39:49.392  INFO 10820 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Starting StudentWorkExpertApplication on DESKTOP-QVLLDMT with PID 10820 (started by 陆拾壹 in C:\Users\陆拾壹\Desktop\院生通\源代码\StudentWorkExpert)
+2019-06-06 19:39:49.396 DEBUG 10820 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 19:39:49.398  INFO 10820 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : No active profile set, falling back to default profiles: default
+2019-06-06 19:39:49.543  INFO 10820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-06 19:39:49.543  INFO 10820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-06 19:39:50.382  INFO 10820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 19:39:50.384  INFO 10820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 19:39:50.431  INFO 10820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-06-06 19:39:50.736  INFO 10820 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a4903f22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 19:39:51.061  INFO 10820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-06-06 19:39:51.081  INFO 10820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 19:39:51.081  INFO 10820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-06 19:39:51.208  INFO 10820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 19:39:51.208  INFO 10820 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1664 ms
+2019-06-06 19:39:51.796  INFO 10820 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 19:39:52.357  INFO 10820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-06 19:39:52.406  INFO 10820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-06-06 19:39:52.408  INFO 10820 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Started StudentWorkExpertApplication in 3.713 seconds (JVM running for 5.407)
+2019-06-06 22:44:34.872  INFO 660 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Starting StudentWorkExpertApplication on DESKTOP-QVLLDMT with PID 660 (started by 陆拾壹 in C:\Users\陆拾壹\Desktop\院生通\源代码\StudentWorkExpert)
+2019-06-06 22:44:34.875 DEBUG 660 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 22:44:34.876  INFO 660 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : No active profile set, falling back to default profiles: default
+2019-06-06 22:44:34.927  INFO 660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-06 22:44:34.927  INFO 660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-06 22:44:35.703  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 22:44:35.705  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 22:44:35.753  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-06-06 22:44:36.054  INFO 660 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$85a40fda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 22:44:36.387  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-06-06 22:44:36.411  INFO 660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 22:44:36.411  INFO 660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-06 22:44:36.538  INFO 660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 22:44:36.539  INFO 660 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1612 ms
+2019-06-06 22:44:37.121  INFO 660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 22:44:37.663  INFO 660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-06 22:44:37.708  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-06-06 22:44:37.711  INFO 660 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Started StudentWorkExpertApplication in 3.425 seconds (JVM running for 4.622)
+2019-06-06 22:44:49.396  INFO 660 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-06 22:44:49.396  INFO 660 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-06 22:44:49.404  INFO 660 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-06-06 22:44:53.391 ERROR 660 --- [http-nio-8000-exec-9] e.g.auto.Exception.MyExceptionHandler    : 【自定义异常】[5]验证码错误
+2019-06-06 22:44:53.435  WARN 660 --- [http-nio-8000-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [edu.gdut.auto.Exception.MyException: 验证码错误]
+2019-06-06 22:45:00.394 ERROR 660 --- [http-nio-8000-exec-1] e.g.auto.Exception.MyExceptionHandler    : 【自定义异常】[5]验证码错误
+2019-06-06 22:45:00.395  WARN 660 --- [http-nio-8000-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [edu.gdut.auto.Exception.MyException: 验证码错误]
+2019-06-06 22:45:57.080 ERROR 660 --- [http-nio-8000-exec-5] e.g.auto.Exception.MyExceptionHandler    : 【自定义异常】[5]验证码错误
+2019-06-06 22:45:57.081  WARN 660 --- [http-nio-8000-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [edu.gdut.auto.Exception.MyException: 验证码错误]
+2019-06-06 22:46:00.234 ERROR 660 --- [http-nio-8000-exec-6] e.g.auto.Exception.MyExceptionHandler    : 【自定义异常】[5]验证码错误
+2019-06-06 22:46:00.235  WARN 660 --- [http-nio-8000-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [edu.gdut.auto.Exception.MyException: 验证码错误]
+2019-06-06 22:46:02.930 ERROR 660 --- [http-nio-8000-exec-2] e.g.auto.Exception.MyExceptionHandler    : 【自定义异常】[5]验证码错误
+2019-06-06 22:46:02.931  WARN 660 --- [http-nio-8000-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [edu.gdut.auto.Exception.MyException: 验证码错误]
+2019-06-06 22:47:44.769 ERROR 660 --- [http-nio-8000-exec-6] e.g.auto.Exception.MyExceptionHandler    : 【自定义异常】[5]验证码错误
+2019-06-06 22:47:44.770  WARN 660 --- [http-nio-8000-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [edu.gdut.auto.Exception.MyException: 验证码错误]
+2019-06-06 23:13:18.128  INFO 660 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-06 23:17:17.705  INFO 10976 --- [main] e.g.a.S.S.StudentServiceImplTest         : Starting StudentServiceImplTest on DESKTOP-QVLLDMT with PID 10976 (started by ½ʰҼ in C:\Users\½ʰҼ\Desktop\Ժ��ͨ\Դ����\StudentWorkExpert)
+2019-06-06 23:17:17.706 DEBUG 10976 --- [main] e.g.a.S.S.StudentServiceImplTest         : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 23:17:17.706  INFO 10976 --- [main] e.g.a.S.S.StudentServiceImplTest         : No active profile set, falling back to default profiles: default
+2019-06-06 23:17:18.490  WARN 10976 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[edu.gdut.auto.Service.ServiceImpl]' package. Please check your configuration.
+2019-06-06 23:17:18.528  INFO 10976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 23:17:18.530  INFO 10976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 23:17:18.556  INFO 10976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-06-06 23:17:18.984  INFO 10976 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89f5df66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 23:17:19.885  INFO 10976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 23:17:21.509  INFO 10976 --- [main] e.g.a.S.S.StudentServiceImplTest         : Started StudentServiceImplTest in 4.262 seconds (JVM running for 5.307)
+2019-06-06 23:17:21.569 ERROR 10976 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@62150f9e] to prepare test instance [edu.gdut.auto.Service.ServiceImpl.StudentServiceImplTest@70d77826]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'edu.gdut.auto.Service.ServiceImpl.StudentServiceImplTest': Unsatisfied dependency expressed through field 'studentService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'edu.gdut.auto.Service.ServiceImpl.StudentServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'edu.gdut.auto.Service.ServiceImpl.StudentServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	... 31 common frames omitted
+
+2019-06-06 23:17:21.597  INFO 10976 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.gdut.auto.Service.StudentServiceTest], using SpringBootContextLoader
+2019-06-06 23:17:21.599  INFO 10976 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [edu.gdut.auto.Service.StudentServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-06 23:17:21.603  INFO 10976 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-06 23:17:21.604  INFO 10976 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@484149eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@14c141c0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@61874b9d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d611f1c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f2d014a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51fc862e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a7cf42f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@fe09383, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@28e0e464, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d98daa0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@70a898b0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7bdf61ad]
+2019-06-06 23:17:21.859  INFO 10976 --- [main] e.gdut.auto.Service.StudentServiceTest   : Starting StudentServiceTest on DESKTOP-QVLLDMT with PID 10976 (started by ½ʰҼ in C:\Users\½ʰҼ\Desktop\Ժ��ͨ\Դ����\StudentWorkExpert)
+2019-06-06 23:17:21.860 DEBUG 10976 --- [main] e.gdut.auto.Service.StudentServiceTest   : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 23:17:21.860  INFO 10976 --- [main] e.gdut.auto.Service.StudentServiceTest   : No active profile set, falling back to default profiles: default
+2019-06-06 23:17:21.876  INFO 10976 --- [main] e.gdut.auto.Service.StudentServiceTest   : Started StudentServiceTest in 0.27 seconds (JVM running for 5.674)
+2019-06-06 23:17:21.880 ERROR 10976 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d611f1c] to prepare test instance [edu.gdut.auto.Service.StudentServiceTest@1450131a]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'edu.gdut.auto.Service.StudentServiceTest': Unsatisfied dependency expressed through field 'studentService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'edu.gdut.auto.Service.StudentService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'edu.gdut.auto.Service.StudentService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	... 31 common frames omitted
+
+2019-06-06 23:17:21.886  INFO 10976 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.gdut.auto.StudentWorkExpertApplicationTests], using SpringBootContextLoader
+2019-06-06 23:17:21.893  INFO 10976 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [edu.gdut.auto.StudentWorkExpertApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-06 23:17:21.894  INFO 10976 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.gdut.auto.StudentWorkExpertApplicationTests]: StudentWorkExpertApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-06-06 23:17:21.908  INFO 10976 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.gdut.auto.StudentWorkExpertApplication for test class edu.gdut.auto.StudentWorkExpertApplicationTests
+2019-06-06 23:17:21.910  INFO 10976 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-06 23:17:21.911  INFO 10976 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7061622, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@32d418a9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@52ea0269, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@746c411c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@43ecfeb5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51efb731, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@53940e2f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@45e6d1e0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@61db86bf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4da1f38a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3e377967, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4dadd690]
+2019-06-06 23:17:21.949  INFO 10976 --- [main] e.g.a.StudentWorkExpertApplicationTests  : Starting StudentWorkExpertApplicationTests on DESKTOP-QVLLDMT with PID 10976 (started by ½ʰҼ in C:\Users\½ʰҼ\Desktop\Ժ��ͨ\Դ����\StudentWorkExpert)
+2019-06-06 23:17:21.949 DEBUG 10976 --- [main] e.g.a.StudentWorkExpertApplicationTests  : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 23:17:21.949  INFO 10976 --- [main] e.g.a.StudentWorkExpertApplicationTests  : No active profile set, falling back to default profiles: default
+2019-06-06 23:17:22.305  INFO 10976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 23:17:22.305  INFO 10976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 23:17:22.343  INFO 10976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
+2019-06-06 23:17:22.465  INFO 10976 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89f5df66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 23:17:23.405  INFO 10976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 23:17:24.018  INFO 10976 --- [main] e.g.a.StudentWorkExpertApplicationTests  : Started StudentWorkExpertApplicationTests in 2.106 seconds (JVM running for 7.816)
+2019-06-06 23:17:24.319  INFO 10976 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-06 23:17:24.320  INFO 10976 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-06 23:17:31.071  INFO 14116 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Starting StudentWorkExpertApplication on DESKTOP-QVLLDMT with PID 14116 (started by 陆拾壹 in C:\Users\陆拾壹\Desktop\院生通\源代码\StudentWorkExpert)
+2019-06-06 23:17:31.073 DEBUG 14116 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-06-06 23:17:31.074  INFO 14116 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : No active profile set, falling back to default profiles: default
+2019-06-06 23:17:31.136  INFO 14116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-06 23:17:31.136  INFO 14116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-06 23:17:32.055  INFO 14116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 23:17:32.058  INFO 14116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-06 23:17:32.109  INFO 14116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
+2019-06-06 23:17:32.419  INFO 14116 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f1a402fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 23:17:32.744  INFO 14116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-06-06 23:17:32.765  INFO 14116 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 23:17:32.765  INFO 14116 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-06 23:17:32.891  INFO 14116 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 23:17:32.891  INFO 14116 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1755 ms
+2019-06-06 23:17:33.554  INFO 14116 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 23:17:34.068  INFO 14116 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-06 23:17:34.119  INFO 14116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-06-06 23:17:34.122  INFO 14116 --- [restartedMain] e.g.auto.StudentWorkExpertApplication    : Started StudentWorkExpertApplication in 3.851 seconds (JVM running for 4.899)
