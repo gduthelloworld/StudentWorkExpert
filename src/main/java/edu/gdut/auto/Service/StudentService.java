@@ -10,4 +10,5 @@ public interface StudentService {
 
     String getStudentPic(String stuId);
 
+    Student getOneStudentDetail(Long stuId);
 }

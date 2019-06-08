@@ -62,6 +62,12 @@ file:
   userPicPath: /static/upload/userPic/
 
 
+#微信相关的配置
+wechat:
+  appid: wxaf85f3c5b8421f25
+  appsecret: 6b4e9dd0d1b9757c1de46a99dabe47de
+
+
 
 
 

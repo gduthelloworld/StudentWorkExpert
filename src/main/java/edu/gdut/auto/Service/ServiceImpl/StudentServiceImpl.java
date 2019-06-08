@@ -35,4 +35,9 @@ public class StudentServiceImpl implements StudentService {
        // return studentMapper.selectByPrimaryKey(stuId_long).getStuPic();
     }
 
+    @Override
+    public Student getOneStudentDetail(Long stuId){
+        return studentMapper.selectByPrimaryKey(stuId);
+    }
+
 }

@@ -107,8 +107,9 @@ public class ApiController {
      */
     @PostMapping("/userPic")
     @ResponseBody
-    public Result updateUserPic(@RequestParam(value = "userPic") MultipartFile file) throws IOException {
-        return ResultUtil.success(fileService.addUserPic(file));
+    public Result updateUserPic(@RequestParam(value = "userPic") MultipartFile file,HttpServletRequest request) throws IOException {
+        String stuId=RequestUtils.GetRequestParameter(request,"stuId");
+        return ResultUtil.success(fileService.addUserPic(file,stuId));
     }
 
     /**
@@ -136,6 +137,12 @@ public class ApiController {
 
         return "redirect:/admin/user";
 
+    }
+
+    @GetMapping("/studentDetail")
+    @ResponseBody
+    public Result getOneStudentDeatail(@RequestParam("stuId")Long stuId){
+        return ResultUtil.success(studentService.getOneStudentDetail(stuId));
     }
 
 

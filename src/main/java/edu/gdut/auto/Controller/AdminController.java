@@ -48,4 +48,9 @@ public class AdminController {
     public String user(){
         return "admin/user";
     }
+
+    @RequestMapping("/evaluation")
+    public String evaluation(){
+        return "admin/evaluation";
+    }
 }

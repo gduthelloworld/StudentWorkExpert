@@ -4,8 +4,11 @@ import edu.gdut.auto.Exception.MyException;
 import edu.gdut.auto.Result.ResultEnum;
 import edu.gdut.auto.Service.FileService;
 import edu.gdut.auto.Uitls.PicUtils;
+import edu.gdut.auto.mappers.StudentMapper;
+import edu.gdut.auto.pojo.Student;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.system.ApplicationHome;
 import org.springframework.stereotype.Service;
@@ -29,9 +32,12 @@ public class FileServiceImpl implements FileService {
     @Value("${file.userPicPath}")
     private String userPicPath;
 
+    @Autowired
+    StudentMapper studentMapper;
+
 
     @Override
-    public String addUserPic(MultipartFile file) {
+    public String addUserPic(MultipartFile file,String stuId) {
         if (file.isEmpty()) {
             log.error("[上传用户图片]：图片参数为空");
             throw new MyException(ResultEnum.Upload_UserPic_Empty);
@@ -59,7 +65,10 @@ public class FileServiceImpl implements FileService {
                 e.printStackTrace();
             }
             //TODO
-
+            Student student=new Student();
+            student.setStuId(Long.valueOf(stuId));
+            student.setStuPic(fileName);
+            studentMapper.updateByPrimaryKeySelective(student);
 
             return fileName;
 

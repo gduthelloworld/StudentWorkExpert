@@ -4,6 +4,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface FileService {
 
-    String addUserPic(MultipartFile file);
+    String addUserPic(MultipartFile file,String stuId);
 
 }
