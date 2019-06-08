@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.gdut.auto.mappers.wxListMapper" >
+  <resultMap id="BaseResultMap" type="edu.gdut.auto.pojo.wxList" >
+    <id column="stu_id" property="stuId" jdbcType="BIGINT" />
+    <result column="stu_name" property="stuName" jdbcType="VARCHAR" />
+    <result column="open_id" property="openId" jdbcType="VARCHAR" />
+    <result column="bd_time" property="bdTime" jdbcType="TIMESTAMP" />
+    <result column="login_time" property="loginTime" jdbcType="TIMESTAMP" />
+    <result column="user_nick_name" property="userNickName" jdbcType="VARCHAR" />
+    <result column="session_id" property="sessionId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    stu_id, stu_name, open_id, bd_time, login_time, user_nick_name, session_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from wx_list
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from wx_list
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="edu.gdut.auto.pojo.wxList" >
+    <selectKey resultType="java.lang.Long" keyProperty="stuId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into wx_list (stu_name, open_id, bd_time, 
+      login_time, user_nick_name, session_id
+      )
+    values (#{stuName,jdbcType=VARCHAR}, #{openId,jdbcType=VARCHAR}, #{bdTime,jdbcType=TIMESTAMP}, 
+      #{loginTime,jdbcType=TIMESTAMP}, #{userNickName,jdbcType=VARCHAR}, #{sessionId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="edu.gdut.auto.pojo.wxList" >
+    <selectKey resultType="java.lang.Long" keyProperty="stuId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into wx_list
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="stuName != null" >
+        stu_name,
+      </if>
+      <if test="openId != null" >
+        open_id,
+      </if>
+      <if test="bdTime != null" >
+        bd_time,
+      </if>
+      <if test="loginTime != null" >
+        login_time,
+      </if>
+      <if test="userNickName != null" >
+        user_nick_name,
+      </if>
+      <if test="sessionId != null" >
+        session_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="stuName != null" >
+        #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null" >
+        #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="bdTime != null" >
+        #{bdTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginTime != null" >
+        #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userNickName != null" >
+        #{userNickName,jdbcType=VARCHAR},
+      </if>
+      <if test="sessionId != null" >
+        #{sessionId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="edu.gdut.auto.pojo.wxList" >
+    update wx_list
+    <set >
+      <if test="stuName != null" >
+        stu_name = #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null" >
+        open_id = #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="bdTime != null" >
+        bd_time = #{bdTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginTime != null" >
+        login_time = #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userNickName != null" >
+        user_nick_name = #{userNickName,jdbcType=VARCHAR},
+      </if>
+      <if test="sessionId != null" >
+        session_id = #{sessionId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="edu.gdut.auto.pojo.wxList" >
+    update wx_list
+    set stu_name = #{stuName,jdbcType=VARCHAR},
+      open_id = #{openId,jdbcType=VARCHAR},
+      bd_time = #{bdTime,jdbcType=TIMESTAMP},
+      login_time = #{loginTime,jdbcType=TIMESTAMP},
+      user_nick_name = #{userNickName,jdbcType=VARCHAR},
+      session_id = #{sessionId,jdbcType=VARCHAR}
+    where stu_id = #{stuId,jdbcType=BIGINT}
+  </update>
+</mapper>
